@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate</title>
+    <link href="validate.css" rel="stylesheet" type="text/css">
+    <script src="validate.js"> </script>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <form method="post" onsubmit="return validate()" action="done.html" class="form-style">
+            <h2 class="heading">Registration Form</h2>
+            <p>User Id:&nbsp;&nbsp; <input type="text" size=20 id="user-id"> </p>
+            <p>Password:&nbsp;&nbsp;<input type="password" size=20 id="pass"> </p>
+            <p>Confirm Password:&nbsp;&nbsp;<input type="password" size=20 id="cpass"> </p>
+
+            <p>Name:&nbsp;&nbsp;<input type="text" size=60 id="name"> </p>
+            <p>Date Of Birth:&nbsp;&nbsp;<input type="date" id="dob" onchange="TDate()"> </p>
+            <p>Address:<br><textarea  rows="5"  id="addr" class="txt-area"></textarea> </p>
+            <p>Country:&nbsp;
+                <select id="country" class="country" value="country">
+                    <option value="India">India</option>&nbsp;&nbsp;
+                    <option value="US">United States</option>&nbsp;&nbsp;
+                    <option value="UK">United Kingdom</option>
+                </select></p>
+            <p>ZIP Code:&nbsp;&nbsp; <input type="text" size=20 id="zip"> </p>
+            <p>Email:&nbsp;&nbsp; <input type="text" size=60 id="email"></p>
+
+            <p>Sex:&nbsp;&nbsp;
+                <input type="radio" value="male" id="male" name="sex"> Male &nbsp;&nbsp;
+                <input type="radio" value="female" id="female" name="sex"> Female
+                <p>Language: &nbsp;
+                    <input type="checkbox" id="Eng" name="language"> English &nbsp;&nbsp;
+                    <input type="checkbox" id="Non-Eng" name="language"> Non English</p>
+                <p>About: <br><textarea  rows="5"  id="about" class="txt-area"></textarea></p>
+                <br>
+
+                <input type="submit" value="Register" name="Submit" class="reg-btn">
+        </form>
+    </div>
+</body>
+
+</html>
